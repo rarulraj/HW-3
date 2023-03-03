@@ -1,5 +1,5 @@
 # HW-3
-CS 421 HW 3
+CS 401 HW 3
 
 roles for HW3:
 
