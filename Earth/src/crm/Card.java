@@ -39,4 +39,9 @@ public class Card {
     public String stringFifthLine(){
         return "";
     }
+
+    public void cardEffect(){
+        // This function is for the individual cards' effects.
+        // For each card subclass, create this function and fill out the effect as necessary.
+    }
 }

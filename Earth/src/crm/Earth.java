@@ -67,7 +67,7 @@ public class Earth {
     // Loads the cards into the deck list
     // For now we just have a Gazelle card here to mess around with.
     private void loadCards() {
-        Fauna gazelle = new Fauna("     Gazelle", " Fill 2+ columns", "  in your island", " ");
+        Gazelle gazelle = new Gazelle();
         deck.add(gazelle);
     }
 }

@@ -1,11 +1,11 @@
 package crm;
 
 public class Fauna extends Card {
-    private final String type = "     <Fauna>";
+    protected final String type = "     <Fauna>";
     // These are just the card text for the objectives split into three strings for printing purposes
-    private String objective1;
-    private String objective2;
-    private String objective3;
+    protected String objective1;
+    protected String objective2;
+    protected String objective3;
 
     public Fauna() {
         name = "";
