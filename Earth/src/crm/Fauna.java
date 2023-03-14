@@ -30,23 +30,19 @@ public class Fauna extends Card {
         return name;
     }
 
-    public void printFullCard(){
-        System.out.println(name + "\n" + type + "\n" + objective1 + "\n" + objective2 + "\n" + objective3);
-    }
-
-    public String stringSecondLine(){
+    public String secondLine(){
         return type;
     }
 
-    public String stringThirdLine(){
+    public String thirdLine(){
         return objective1;
     }
 
-    public String stringFourthLine(){
+    public String fourthLine(){
         return objective2;
     }
 
-    public String stringFifthLine(){
+    public String fifthLine(){
         return objective3;
     }
 }

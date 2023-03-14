@@ -21,15 +21,32 @@ public class Earth {
         int i = 0;
         int inputInt1 = 0;
         int inputInt2 = 0;
+        int inputInt3 = 0;
         boolean quit = false;
         while (!quit) {
+            // Round Start
+            // Cycle through players in order
             for (i = 0; i < players.length; i++) {
                 System.out.println(players[i].getName() + "'s turn.");
-                System.out.println("Place a card on your field (input row, then column, 0-3).");
-                inputInt1 = scan.nextInt();
-                inputInt2 = scan.nextInt();
-                players[i].playCard(inputInt1,inputInt2,deck.get(deck.size() - 1));
+                System.out.println(players[i].getName() + " draws " + 1 + " card.");
+                players[i].drawCard(1, this.deck);
+                System.out.println(players[i].getName() + " has " + players[i].getPoints() + " point(s).");
                 players[i].printGrid();
+                System.out.println(players[i].getName() + "'s hand.");
+                players[i].printHand();
+                System.out.println("Pick a card to play (0 to pass).");
+                inputInt3 = scan.nextInt();
+                if (!players[i].emptyHand() && inputInt3 > 0 && inputInt3 < players[i].getHandSize() + 1) {
+                    System.out.println("Place the card on your field (input row, then column, 0-3).");
+                    inputInt1 = scan.nextInt();
+                    inputInt2 = scan.nextInt();
+                    players[i].playCard(inputInt1,inputInt2,inputInt3);
+                    players[i].printGrid();
+                } else {
+                    System.out.println(players[i].getName() + "'s hand is empty.");
+                }
+                System.out.println();
+                System.out.println();
             }
             System.out.print("Continue? (0 = no | 1 = yes): ");
             inputInt1 = scan.nextInt();
@@ -67,7 +84,7 @@ public class Earth {
     // Loads the cards into the deck list
     // For now we just have a Gazelle card here to mess around with.
     private void loadCards() {
-        Gazelle gazelle = new Gazelle();
-        deck.add(gazelle);
+        NorthernGiraffe northernGiraffe = new NorthernGiraffe();
+        deck.add(northernGiraffe);
     }
 }

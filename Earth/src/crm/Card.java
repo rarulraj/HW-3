@@ -21,26 +21,45 @@ public class Card {
     }
 
     public void printFullCard(){
-        System.out.println(name);
+        System.out.printf("%-20s", "| " + firstLine());
+        System.out.print(" |  ");
+        System.out.println();
+        System.out.printf("%-20s", "| " + secondLine());
+        System.out.print(" |  ");
+        System.out.println();
+        System.out.printf("%-20s", "| " + thirdLine());
+        System.out.print(" |  ");
+        System.out.println();
+        System.out.printf("%-20s", "| " + fourthLine());
+        System.out.print(" |  ");
+        System.out.println();
+        System.out.printf("%-20s", "| " + fifthLine());
+        System.out.print(" |  ");
+        System.out.println();
     }
 
-    public String stringSecondLine(){
+    public String firstLine() {
+        return name;
+    }
+
+    public String secondLine(){
         return "";
     }
 
-    public String stringThirdLine(){
+    public String thirdLine(){
         return "";
     }
 
-    public String stringFourthLine(){
+    public String fourthLine(){
         return "";
     }
 
-    public String stringFifthLine(){
+    public String fifthLine(){
         return "";
     }
 
-    public void cardEffect(){
+    public int cardEffect(PlayerBoard p){
+        return 0;
         // This function is for the individual cards' effects.
         // For each card subclass, create this function and fill out the effect as necessary.
     }
